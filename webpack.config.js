@@ -112,7 +112,7 @@ module.exports = options => {
             publicPath: isLocal ? 'http://localhost:9999/' : '',
             filename: isLocal ? 'js/[name].js' : 'js/[name]-[hash:8].min.js',
             path: path.resolve('dist'), // 打包后的目录，必须是绝对路径
-            chunkFilename: isLocal ? 'js/[name].bundle.js' : 'js/[name].bundle.min.js'
+            chunkFilename: isLocal ? 'js/[name].bundle.js' : 'js/picker-page-picker.min.js'
         },
         resolve: {
             extensions: ['.js', '.json'],

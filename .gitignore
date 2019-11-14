@@ -2,7 +2,6 @@
 .vscode/
 node_modules/
 bower_components/
-dist/
 zip/
 *.log*
 env/local*
