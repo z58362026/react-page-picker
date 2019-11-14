@@ -1,4 +1,7 @@
 import qs from 'qs'
+import test from './test'
+
+export { test }
 
 const type = 'application/x-www-form-urlencoded'
 axios.defaults.headers['Content-Type'] = type

@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+node_modules/
+dist/
+env/
+src/index.js
+src/index.ejs
+src/pages/
+src/resource/
+src/routes/
+src/api/
+src/config/
+src/util/

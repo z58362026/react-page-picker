@@ -1,8 +1,8 @@
 {
     "name": "react-page-picker",
-    "version": "1.0.0",
+    "version": "2.0.1",
     "description": "",
-    "main": "index.js",
+    "main": "./src/compontents/react-picker-cn.js",
     "scripts": {
         "hot": "webpack-dev-server --env.config hot  --env.local",
         "pro": "webpack --env.config pro --env.pro"
@@ -14,10 +14,12 @@
     "keywords": [
         "react",
         "hooks",
+        "mock",
+        "lazy",
         "react-pagepicker",
         "react-page-picker"
     ],
-    "author": "",
+    "author": "wangming",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/z58362026/react-page-picker/issues"
@@ -51,9 +53,6 @@
         "node-sass": "^4.13.0",
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "qs": "^6.9.1",
-        "react": "^16.11.0",
-        "react-dom": "^16.11.0",
-        "react-router": "^5.1.2",
         "sass-loader": "^7.2.0",
         "style-loader": "^1.0.0",
         "stylelint": "^11.1.1",
@@ -67,5 +66,9 @@
         "webpack-api-mocker": "^1.7.6",
         "webpack-cli": "^3.3.7",
         "webpack-dev-server": "^3.8.0"
+    },
+    "dependencies": {
+        "prop-types": "^15.7.2",
+        "react": "^16.8.6"
     }
 }

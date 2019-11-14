@@ -3,7 +3,7 @@
  * 学生列表
  */
 import '../common/style/app.scss'
-import api from '@api/test'
+import { test as api } from '@api'
 // import Picker from '../compontents/react-picker-cn'
 // import loadable from '@loadable/component'
 const { useState, useEffect, lazy, Suspense } = React
@@ -37,6 +37,7 @@ const App = () => {
                 setPageOptions(Object.assign({}, pageOptions))
             }
         })
+        api.testData1().then()
     }, [pageNo])
     return (
         <div className="student_content">
