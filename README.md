@@ -1,4 +1,8 @@
-#react-page-picker
+# react-page-picker
+
+## Picture
+
+![preview-dark](https://github.com/z58362026/react-page-picker/blob/master/src/resource/WX20191114-162617@2x.png?raw=true)
 
 ## Example
 
@@ -86,9 +90,9 @@ export default App
 | tplSize  | Number | 10       | Page number default length          |
 | count    | Number | 100      | Total number of page arrays         |
 
-Event
+## Event
 
 pageCallback: 回调函数
 
-    page: 必选，当前点击页数
+    page : 必选，当前点击页数
     error: 错误信息
