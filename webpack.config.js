@@ -24,7 +24,12 @@ module.exports = options => {
     const port = env.port || 9999
     const isLocal = options.local
     const libKeys = ['react', 'reactDom', 'reactRouteDom', 'axios', 'propTypes']
-    const libs = []
+    const libs = libKeys.map(item => {
+        return {
+            url: 'http:' + plugin[item],
+            isAsync: false
+        }
+    })
     const rules = [
         {
             test: /\.js$/,
@@ -90,12 +95,12 @@ module.exports = options => {
         }
     }
 
-    libKeys.forEach(item =>
-        libs.push({
-            url: plugin[item],
-            isAsync: false
-        })
-    )
+    // libKeys.forEach(item =>
+    //     libs.push({
+    //         url: plugin[item],
+    //         isAsync: false
+    //     })
+    // )
 
     return {
         stats: 'errors-only',
@@ -104,9 +109,10 @@ module.exports = options => {
             app: './src'
         },
         output: {
-            publicPath: 'http://localhost:9999',
+            publicPath: isLocal ? 'http://localhost:9999/' : '',
             filename: isLocal ? 'js/[name].js' : 'js/[name]-[hash:8].min.js',
-            path: path.resolve('dist') // 打包后的目录，必须是绝对路径
+            path: path.resolve('dist'), // 打包后的目录，必须是绝对路径
+            chunkFilename: isLocal ? 'js/[name].bundle.js' : 'js/[name].bundle.min.js'
         },
         resolve: {
             extensions: ['.js', '.json'],

@@ -4,8 +4,10 @@
  */
 import '../common/style/app.scss'
 import api from '@api/test'
-import Picker from '../compontents/react-picker-cn'
-const { useState, useEffect } = React
+// import Picker from '../compontents/react-picker-cn'
+// import loadable from '@loadable/component'
+const { useState, useEffect, lazy, Suspense } = React
+const Picker = lazy(() => import('../compontents/react-picker-cn'))
 const cacheList = new Map()
 const App = () => {
     const [pageNo, setPageNo] = useState(1)
@@ -56,7 +58,9 @@ const App = () => {
                     )
                 }
             </ul>
-            <Picker pageCallback={pageCallback} options={pageOptions}></Picker>
+            <Suspense fallback={<div>loading</div>}>
+                <Picker pageCallback={pageCallback} options={pageOptions} />
+            </Suspense>
         </div>
     )
 }
