@@ -1,0 +1,69 @@
+{
+    "name": "react-page-picker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "hot": "webpack-dev-server --env.config hot  --env.local",
+        "pro": "webpack --env.config pro --env.pro"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/z58362026/react-page-picker.git"
+    },
+    "keywords": [
+        "react",
+        "hooks",
+        "react-pagepicker",
+        "react-page-picker"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/z58362026/react-page-picker/issues"
+    },
+    "homepage": "https://github.com/z58362026/react-page-picker#readme",
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/preset-react": "^7.0.0",
+        "autoprefixer": "^9.6.1",
+        "babel-eslint": "^10.0.2",
+        "babel-loader": "^8.0.6",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^3.2.0",
+        "eslint": "^6.2.1",
+        "eslint-config-standard": "^14.1.0",
+        "eslint-plugin-html": "^6.0.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^10.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.14.3",
+        "eslint-plugin-standard": "^4.0.1",
+        "file-loader": "^4.2.0",
+        "html-webpack-harddisk-plugin": "^1.0.1",
+        "html-webpack-plugin": "^3.2.0",
+        "husky": "^3.0.9",
+        "lint-staged": "^9.4.2",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-sass": "^4.13.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "qs": "^6.9.1",
+        "react": "^16.11.0",
+        "react-dom": "^16.11.0",
+        "react-router": "^5.1.2",
+        "sass-loader": "^7.2.0",
+        "style-loader": "^1.0.0",
+        "stylelint": "^11.1.1",
+        "stylelint-config-recess-order": "^2.0.3",
+        "stylelint-config-recommended-scss": "^4.0.0",
+        "stylelint-config-standard": "^19.0.0",
+        "stylelint-order": "^3.1.1",
+        "stylelint-scss": "^3.12.1",
+        "url-loader": "^2.1.0",
+        "webpack": "^4.39.2",
+        "webpack-api-mocker": "^1.7.6",
+        "webpack-cli": "^3.3.7",
+        "webpack-dev-server": "^3.8.0"
+    }
+}

@@ -1,0 +1,81 @@
+$blue-normal: #1593ff;
+$blue-hover: #198ae7;
+
+$green-normal: #1bc7b1;
+$green-hover: #00b49d;
+
+$orange-normal: #f89300;
+$orange-hover: #ef8a00;
+
+$red-normal: #ff296a;
+$red-hover: #ff004d;
+
+$boxShadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+
+// 背景图片地址和大小
+@mixin bis($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//定位全屏
+@mixin allcover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+//定位上下左右居中
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+@mixin ct {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//定位左右居中
+@mixin cl {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+//宽高
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {
+    font: #{$size}/#{$line-height} $family;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between) {
+    display: flex;
+    justify-content: $type;
+}

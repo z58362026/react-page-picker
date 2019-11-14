@@ -1,0 +1,68 @@
+@import '../common/style/variables.scss';
+.picker-content {
+    @include fj('left');
+    ul.picker-page {
+        li {
+            @include wh(60px, 36px);
+            @include font(14px, 36px);
+            text-align: center;
+            float: left;
+            border: 1px solid #ccd5db;
+            background: #fff;
+            cursor: pointer;
+            &:hover {
+                background: $blue-normal;
+                color: #fff;
+                // border:1px solid $blue-normal;
+            }
+        }
+        .picker-item-short {
+            width: 36px;
+        }
+        li.noActive {
+            color: #ccc;
+            pointer-events: none;
+            cursor: 'not-allowed';
+        }
+        li.active {
+            background: $blue-normal;
+            color: #fff;
+            border: 1px solid $blue-normal;
+        }
+    }
+    ul.picker-go {
+        margin-left: 16px;
+        li {
+            @include wh(36px, 36px);
+            @include font(14px, 36px);
+            text-align: center;
+            float: left;
+            background: #fff;
+            cursor: pointer;
+            input {
+                @include wh(100%, 100%);
+                padding: 0 6px;
+                border: 1px solid #ccd5db;
+                border-radius: 3px 0 0 3px;
+                text-align: center;
+                background: #fafafa;
+            }
+        }
+        li.picker-item-go {
+            &:hover {
+                background: $blue-normal;
+                color: #fff;
+                border-color: 1px solid #ccd5db;
+            }
+        }
+        li.picker-item-big {
+            border: 1px solid #ccd5db;
+            width: 48px;
+        }
+        li.active {
+            background: $blue-normal;
+            color: #fff;
+            border-color: 1px solid #ccd5db;
+        }
+    }
+}

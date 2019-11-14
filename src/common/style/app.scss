@@ -1,0 +1,31 @@
+@import './variables.scss';
+header {
+    @include wh(100%, 70px);
+    ul {
+        width: 200px;
+        margin: 0 auto;
+        overflow: hidden;
+        li {
+            @include wh(100px, 50px);
+            @include font(14px, 50px);
+            float: left;
+        }
+    }
+}
+.student_content {
+    > ul {
+        width: 100%;
+        margin-bottom: 50px;
+        li {
+            @include fj();
+            span {
+                @include wh(100px, 50px);
+                @include font(14px, 50px);
+                text-align: center;
+            }
+            &:nth-of-type(2n) {
+                background: #ddd;
+            }
+        }
+    }
+}
