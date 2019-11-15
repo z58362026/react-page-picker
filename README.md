@@ -4,6 +4,18 @@
 
 ![preview-dark](https://github.com/z58362026/react-page-picker/blob/master/src/resource/WX20191114-162617@2x.png?raw=true)
 
+## 安装和运行
+
+克隆项目：https://github.com/z58362026/react-page-picker.git
+
+npm 包依赖：npm install
+
+本地热更新：npm run hot
+
+打开页面：loaclhost:9999
+
+上线打包：npm run pro
+
 ## Example
 
 ```

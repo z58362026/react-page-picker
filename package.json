@@ -1,5 +1,5 @@
 {
-    "name": "@wangming/react-picker",
+    "name": "react-page-picker",
     "version": "1.0.0",
     "description": "",
     "main": "./src/componttents/react-picker-cn.js",
