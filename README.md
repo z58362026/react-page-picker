@@ -16,6 +16,10 @@ npm 包依赖：npm install
 
 上线打包：npm run pro
 
+## npm 下载
+
+npm install react-page-picker
+
 ## Example
 
 ```
