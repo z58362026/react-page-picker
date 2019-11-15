@@ -1,5 +1,9 @@
 # react-page-picker
 
+## About
+
+本插件依赖 react,prop-types,scss 解析
+
 ## Picture
 
 ![preview-dark](https://github.com/z58362026/react-page-picker/blob/master/src/resource/WX20191114-162617@2x.png?raw=true)
@@ -15,10 +19,6 @@ npm 包依赖：npm install
 打开页面：loaclhost:9999
 
 上线打包：npm run pro
-
-## npm 下载
-
-npm install react-page-picker
 
 ## Example
 
