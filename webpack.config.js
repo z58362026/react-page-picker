@@ -26,7 +26,7 @@ module.exports = options => {
     const libKeys = ['react', 'reactDom', 'reactRouteDom', 'axios', 'propTypes']
     const libs = libKeys.map(item => {
         return {
-            url: 'http:' + plugin[item],
+            url: plugin[item],
             isAsync: false
         }
     })
@@ -95,13 +95,6 @@ module.exports = options => {
         }
     }
 
-    // libKeys.forEach(item =>
-    //     libs.push({
-    //         url: plugin[item],
-    //         isAsync: false
-    //     })
-    // )
-
     return {
         stats: 'errors-only',
         mode: isLocal ? 'development' : 'production',
@@ -109,7 +102,8 @@ module.exports = options => {
             app: './src'
         },
         output: {
-            publicPath: isLocal ? 'http://localhost:9999/' : '',
+            // publicPath: isLocal ? 'http://localhost:9999/' : '',
+            publicPath: `//${env.host.cdn + (options.hot ? ':' + port : '')}/${name}/`,
             filename: isLocal ? 'js/[name].js' : 'js/[name]-[hash:8].min.js',
             path: path.resolve('dist'), // 打包后的目录，必须是绝对路径
             chunkFilename: isLocal ? 'js/[name].bundle.js' : 'js/picker-page-picker.min.js'
@@ -130,12 +124,14 @@ module.exports = options => {
             port,
             hot: true,
             disableHostCheck: true,
+            contentBase: path.join(__dirname, 'dist'),
+            host: env.host.cdn,
             headers: {
                 'Access-Control-Allow-Origin': '*'
             },
             before(app) {
                 apiMocker(app, path.resolve('./mock'), {
-                    'GET /api/list': 'http://localhost:9999'
+                    'GET /api/list': ''
                 })
             }
         }
