@@ -94,11 +94,6 @@ module.exports = options => {
                 .replace('.production', '.development')
         }
     }
-<<<<<<< HEAD
-    console.log(env)
-=======
-
->>>>>>> a62be843aff30085985a9373036c67f6c0cbc7f4
     return {
         stats: 'errors-only',
         mode: isLocal ? 'development' : 'production',
@@ -106,13 +101,8 @@ module.exports = options => {
             app: './src'
         },
         output: {
-<<<<<<< HEAD
             publicPath: isLocal ? 'http://localhost:9999/' : '',
             // publicPath: `//${env.host.cdn + (options.hot ? ':' + port : '')}/${name}/`,
-=======
-            // publicPath: isLocal ? 'http://localhost:9999/' : '',
-            publicPath: `//${env.host.cdn + (options.hot ? ':' + port : '')}/${name}/`,
->>>>>>> a62be843aff30085985a9373036c67f6c0cbc7f4
             filename: isLocal ? 'js/[name].js' : 'js/[name]-[hash:8].min.js',
             path: path.resolve('dist'), // 打包后的目录，必须是绝对路径
             chunkFilename: isLocal ? 'js/[name].bundle.js' : 'js/picker-page-picker.min.js'
@@ -134,12 +124,8 @@ module.exports = options => {
             hot: true,
             disableHostCheck: true,
             contentBase: path.join(__dirname, 'dist'),
-<<<<<<< HEAD
             // host: env.host.cdn,
             host: 'localhost',
-=======
-            host: env.host.cdn,
->>>>>>> a62be843aff30085985a9373036c67f6c0cbc7f4
             headers: {
                 'Access-Control-Allow-Origin': '*'
             },
